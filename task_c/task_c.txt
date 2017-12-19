@@ -1,0 +1,30 @@
+Tukaj bi najprej dnk razbil na posamezne lastnosti, sepravi bi vsebino dnk vzorca iz primera razdelil na 3 delčke dolžine 6. 
+Nato sestavil tabelo osumljencev katera bi vsebovala ime, kodo tipa las, kodo tipa oči, ter kodo rase, ki jo ima določeni osumljenec.
+Nato pa bi z if stavkom preveril kateri osumljenec ima vse te točno določene lastnosti.
+
+<?php
+    $dnkSample = "HHHKLJ140L98IHYYYN";
+    
+    $dnkHairSequence = substr($dnkSample, 0,6);
+    $dnkEyesSequence = substr($dnkSample, 6,6);
+    $dnkRaceSequence = substr($dnkSample, 12,6);
+
+    $suspects = array(
+            ["name"=>"John Novak", "hair"=>"HHHKLI", "eyes"=>"140A98", "race"=>"1HYYYN" ],
+            ["name"=>"Vin Diesel", "hair"=>"HHLH1L", "eyes"=>"140A88", "race"=>"IHYYNN" ],
+            ["name"=>"Guy Fawkes", "hair"=>"HHHKLI", "eyes"=>"140A88", "race"=>"IHYYYN" ]
+        );
+    
+    $match = 0;
+    foreach($suspects as $suspect){
+        if($suspect["hair"] == $dnkHairSequence && $suspect["eyes"] == $dnkEyesSequence && $suspect["haraceir"] == $dnkRaceSequence  ){
+            echo $suspect["name"];
+            $match = 1;
+        }
+            
+    }
+    if($match == 0){
+        echo "match not found in our database";
+    }
+
+?>

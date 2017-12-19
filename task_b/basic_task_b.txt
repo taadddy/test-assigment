@@ -1,0 +1,15 @@
+Za rešitev bi uporabil webpack module bundler, ter glob node js modulom kateri mi omogoča poiskati vse datoteke z končnico .js 
+in jih združil v datoteko bundle.js, ki bi vsebovala vse posamezne najdene .js datoteke 
+
+primer:
+const webpack = require('webpack'),
+         glob = require('glob');
+let config = {
+  	entry: { 
+		 'jsFiles': glob.sync('./path/to/**/*.js'),
+  	},
+  	output: {
+  		path: './dist',
+		filename: 'bundle--[name].js'
+	},
+};

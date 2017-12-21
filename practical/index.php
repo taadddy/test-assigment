@@ -126,8 +126,8 @@
     }
 
     $carSales = parseAndPrepareDataForDb();
-    //            insertCarSalesData($carSales);
-    //            insertBuyers($carSales);
+    insertCarSalesData($carSales);
+    insertBuyers($carSales);
 
 
     ?>

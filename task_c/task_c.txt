@@ -1,6 +1,8 @@
 Tukaj bi najprej dnk razbil na posamezne lastnosti, sepravi bi vsebino dnk vzorca iz primera razdelil na 3 delčke dolžine 6. 
 Nato sestavil tabelo osumljencev katera bi vsebovala ime, kodo tipa las, kodo tipa oči, ter kodo rase, ki jo ima določeni osumljenec.
 Nato pa bi z if stavkom preveril kateri osumljenec ima vse te točno določene lastnosti.
+Za podan dnk vzorec nisem dobil rezultatov, zdaj nevem ali je to namerno ali je samo napaka v podatkih, pravtako sem sklepal da je rasa white 
+enako kot caucasian.
 
 <?php
     $dnkSample = "HHHKLJ140L98IHYYYN";
